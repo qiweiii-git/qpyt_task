@@ -1,10 +1,10 @@
 #*****************************************************************************
 #    # #              Name   : build.py
-#  #     #            Date   : Mar. 20, 2020
+#  #     #            Date   : Apr. 24, 2020
 # #    #  #  #     #  Author : Qiwei Wu
 #  #     #  # #  # #  Version: 1.0
 #    # #  #    #   #
-# build.py for qpyt00_opencv project
+# build.py for qpyt01_9x9 project
 #*****************************************************************************
 #!/usr/bin/python
 
@@ -12,24 +12,17 @@ import os
 import sys
 
 #*****************************************************************************
-# Add persional python path
-#*****************************************************************************
-sys.path.append('../../code/utils')
-sys.path.append('../../code/opencv')
-
-import printTools
-import testPattern
-
-#*****************************************************************************
 # Add persional python function
 #*****************************************************************************
 def printStart():
    print( "Building starting......" )
 
-def testPatternGen():
-   testPattern.gen()
+def print9x9():
+   for i in range(1, 10):
+      for j in range(1, i + 1):
+         print( "%d*%d=%d" % ( i, j, i*j ), end='\t')
+      print("\n")
 
 if __name__ == "__main__":
    printStart()
-   testPatternGen()
-   
+   print9x9()

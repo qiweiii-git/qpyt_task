@@ -1,24 +1,28 @@
 #*****************************************************************************
 #    # #              Name   : build.py
-#  #     #            Date   : Mar. 20, 2020
+#  #     #            Date   : Apr. 24, 2020
 # #    #  #  #     #  Author : Qiwei Wu
 #  #     #  # #  # #  Version: 1.0
 #    # #  #    #   #
-# build.py for qpyt00_opencv project
+# build.py for qpyt02_douban250 project
 #*****************************************************************************
 #!/usr/bin/python
+# coding=utf-8
 
 import os
 import sys
+from bs4 import BeautifulSoup
+import re
+import urllib
+import xlwt
+import sqlite3
 
 #*****************************************************************************
 # Add persional python path
 #*****************************************************************************
-sys.path.append('../../code/utils')
-sys.path.append('../../code/opencv')
+sys.path.append('../../code/urllib')
 
-import printTools
-import testPattern
+import testUrllib
 
 #*****************************************************************************
 # Add persional python function
@@ -26,10 +30,6 @@ import testPattern
 def printStart():
    print( "Building starting......" )
 
-def testPatternGen():
-   testPattern.gen()
-
 if __name__ == "__main__":
    printStart()
-   testPatternGen()
-   
+   testUrllib.testUrllib()
