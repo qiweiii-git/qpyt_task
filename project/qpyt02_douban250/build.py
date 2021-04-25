@@ -23,6 +23,7 @@ import sqlite3
 sys.path.append('../../code/urllib')
 
 import testUrllib
+import UrllibCtrl
 
 #*****************************************************************************
 # Add persional python function
@@ -33,3 +34,4 @@ def printStart():
 if __name__ == "__main__":
    printStart()
    testUrllib.testUrllib()
+   UrllibCtrl.UrllibGetDataFromDouban()

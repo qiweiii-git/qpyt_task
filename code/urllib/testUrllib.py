@@ -16,7 +16,7 @@ def testUrllib():
    # Get request
    response = urllib.request.urlopen("http://www.baidu.com")
    htmlData = response.read().decode('utf-8')
-   print(htmlData)
+   #print(htmlData)
    htmlFile = open('./testUrllibGet.html', 'w')
    htmlFile.write(htmlData)
    htmlFile.close()
@@ -26,7 +26,7 @@ def testUrllib():
    data = bytes(urllib.parse.urlencode({'1':'2'}), encoding="utf-8")
    response = urllib.request.urlopen("http://httpbin.org/post", data=data)
    htmlData = response.read().decode('utf-8')
-   print(htmlData)
+   #print(htmlData)
    htmlFile = open('./testUrllibPost.html', 'w')
    htmlFile.write(htmlData)
    htmlFile.close()
