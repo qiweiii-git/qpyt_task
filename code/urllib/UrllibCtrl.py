@@ -32,9 +32,11 @@ def UrllibGet(url):
 def UrllibGetDataFromDouban():
    urlBase = "https://movie.douban.com/top250"
    for i in range(0, 10):
+      # Get html
       url = urlBase + '?start=' + '%d' % (i * 25)
       htmlData = UrllibGet(url)
       fileName = './douban250Page' + '%d' % (i) + '.html'
       htmlFile = open(fileName, 'w')
       htmlFile.write(htmlData)
       htmlFile.close()
+      # Decode html

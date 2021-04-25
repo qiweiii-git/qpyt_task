@@ -22,6 +22,7 @@ import sqlite3
 #*****************************************************************************
 sys.path.append('../../code/urllib')
 
+import testBs4
 import testUrllib
 import UrllibCtrl
 
@@ -34,4 +35,5 @@ def printStart():
 if __name__ == "__main__":
    printStart()
    testUrllib.testUrllib()
+   testBs4.testBs4()
    UrllibCtrl.UrllibGetDataFromDouban()
